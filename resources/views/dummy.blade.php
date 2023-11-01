@@ -103,25 +103,28 @@
         <div class="sidebar">
             <form action="{{ route('dummy') }}" method="GET">
             @csrf
-            <div class="search">
-                <input type="text" name="search" placeholder="Search">
-            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" name="search" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="search-button">
+            </div>              
 
             <div class="checkbox">
                 <label for="category">Category</label>
                 <br>
-                Category-1: <input type="checkbox" name="categories[]" value="category-1">
-                Category-2: <input type="checkbox" name="categories[]" value="category-2">
-                Category-3: <input type="checkbox" name="categories[]" value="category-3">
+                Category-1: <input class="form-check-input" type="checkbox" id="exampleCheckbox" name="categories[]" value="category-1">
+                Category-2: <input class="form-check-input" type="checkbox" id="exampleCheckbox" name="categories[]" value="category-2">
+                Category-3: <input class="form-check-input" type="checkbox" id="exampleCheckbox" name="categories[]" value="category-3">
+
             </div>
             <div class="checkbox">
                 <label for="brand">Brand</label>
                 <br>
-                Brand-1: <input type="checkbox" name="brands[]" value="brand-1">
-                Brand-2: <input type="checkbox" name="brands[]" value="brand-2">
-                Brand-3: <input type="checkbox" name="brands[]" value="brand-3">
+                Brand-1: <input class="form-check-input" type="checkbox" id="exampleCheckbox" name="brands[]" value="brand-1">
+                Brand-2: <input class="form-check-input" type="checkbox" id="exampleCheckbox" name="brands[]" value="brand-2">
+                Brand-3: <input class="form-check-input" type="checkbox" id="exampleCheckbox" name="brands[]" value="brand-3">
+
             </div>
-            <button type="submit">Apply</button>
+            <button class="btn btn-primary" type="submit" id="search-button">Search</button>
             </form>
         </div>
         <div id="data-wrapper">
